@@ -1,0 +1,30 @@
+{
+  "name": "windows-solitaire-html5",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A complete, accessible, browser-native Klondike Solitaire game.",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:unit": "vitest run",
+    "test:browser": "cross-env PLAYWRIGHT_BROWSERS_PATH=.playwright-browsers playwright test",
+    "test:all": "npm run test:unit && npm run build && npm run test:browser",
+    "browser:install": "cross-env PLAYWRIGHT_BROWSERS_PATH=.playwright-browsers playwright install chromium",
+    "test:coverage": "vitest run --coverage",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name amd-buildday-solitaire"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.7",
+    "@vitest/coverage-v8": "^5.1.1",
+    "cross-env": "^10.1.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1",
+    "wrangler": "^4.168.0"
+  }
+}

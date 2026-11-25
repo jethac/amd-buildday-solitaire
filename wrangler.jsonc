@@ -1,0 +1,5 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "amd-buildday-solitaire",
+  "pages_build_output_dir": "dist"
+}

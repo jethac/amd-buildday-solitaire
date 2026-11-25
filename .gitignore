@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.wrangler/
+.playwright-browsers/
+.playwright-mcp/
+playwright-report/
+test-results/
+coverage/
+.env
+.env.*
+*.local
+.DS_Store
